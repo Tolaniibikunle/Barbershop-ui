@@ -1,0 +1,22 @@
+@import "../../util/colors";
+
+.navbar {
+  background-color: $grey-background;
+  max-height: 60px;
+
+  span.header-title {
+    font-weight: 700;
+    color: $blue-text;
+  }
+
+  .nav-item.nav-link {
+    color: $white-text;
+    padding-left:30px;
+    padding-right:30px;
+
+    &:hover {
+      color: $light-blue;
+    }
+  }
+
+}
