@@ -6,7 +6,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NewsCardComponent } from './components/news-card/news-card.component';
 import { PhotoCarouselComponent } from './components/photo-carousel/photo-carousel.component';
-//  import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { ServicesComponent } from './components/screens/services/services.component';
 import { AppointmentComponent } from './components/screens/appointment/appointment.component';
 import { BlogComponent } from './components/screens/blog/blog.component';
@@ -28,7 +28,7 @@ import { ContactUsComponent } from './components/screens/contact-us/contact-us.c
   ],
   imports: [
     BrowserModule,
-    //  AppRoutingModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
