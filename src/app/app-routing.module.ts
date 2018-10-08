@@ -5,11 +5,10 @@ import { ServicesComponent } from './components/screens/services/services.compon
 import { AppointmentComponent } from './components/screens/appointment/appointment.component';
 import { BlogComponent } from './components/screens/blog/blog.component';
 import { AboutUsComponent } from './components/screens/about-us/about-us.component';
-// import { AppComponent } from './app.component';
+import { DashboardComponent } from './components/screens/dashboard/dashboard.component';
 
 const routes: Routes =[
-  // {path: '', redirectTo: '/dashboard'},
-  // {path: 'dashboard', component: AppComponent},
+  {path: 'dashboard', component: DashboardComponent},
   {path: 'services', component: ServicesComponent},
   {path: 'appointments', component: AppointmentComponent},
   {path: 'blog', component: BlogComponent},
