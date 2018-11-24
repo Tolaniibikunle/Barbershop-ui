@@ -13,7 +13,12 @@ const routes: Routes =[
   {path: 'appointments', component: AppointmentComponent},
   {path: 'blog', component: BlogComponent},
   {path: 'about-us', component: AboutUsComponent},
-  {path: 'contact-us', component: ContactUsComponent}
+  {path: 'contact-us', component: ContactUsComponent},
+  {
+    path: '',
+    redirectTo: '/dashboard',
+    pathMatch: 'full'
+  }
 ]
 @NgModule({
   imports:[RouterModule.forRoot(routes)],
