@@ -1,7 +1,44 @@
-<app-header class="sticky-top"></app-header>
-
-<main class="container-fluid">
-  <router-outlet></router-outlet>
-</main>
-
-<app-footer></app-footer>
+<div mdl class="layout-transparent mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header mdl-layout__header--transparent mdl-layout--fixed-header">
+    <div class="mdl-layout__header-row">
+      <img src="/assets/img/gq_official_logo.svg" width="64" height="64" alt="Gentlemens Quarters">
+      <span class="mdl-layout-title">Gentlemens Quarters</span>
+      <div class="mdl-layout-spacer"></div>
+      <nav class="mdl-navigation">
+        <a *ngFor="let route of routes" class="mdl-navigation__link" [routerLink]="route.link">{{route.name}}</a>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Gentlemens Quarters</span>
+    <nav class="mdl-navigation">
+      <a *ngFor="let route of routes" class="mdl-navigation__link" [routerLink]="route.link">{{route.name}}</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <router-outlet></router-outlet>
+  </main>
+  <footer class="mdl-mini-footer">
+    <div class="mdl-mini-footer__left-section">
+      <div class="mdl-logo">
+        More Information
+      </div>
+      <ul class="mdl-mini-footer__link-list">
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Privacy and Terms</a></li>
+        <li><a href="#">User Agreement</a></li>
+      </ul>
+    </div>
+    <div class="mdl-mini-footer__right-section">
+      <button class="mdl-mini-footer__social-btn">
+        <img src="/assets/img/flogo-HexRBG-Wht-72.svg" />
+      </button>
+      <button class="mdl-mini-footer__social-btn">
+        <img src="/assets/img/Twitter_Logo_WhiteOnImage.svg" />
+      </button>
+      <button class="mdl-mini-footer__social-btn">
+        <img src="/assets/img/In-White-0p75in-R.svg" />
+      </button>
+    </div>
+  </footer>
+</div>

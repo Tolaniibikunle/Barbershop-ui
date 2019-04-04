@@ -8,6 +8,7 @@ import { AboutUsComponent } from './components/screens/about-us/about-us.compone
 import { DashboardComponent } from './components/screens/dashboard/dashboard.component';
 
 const routes: Routes =[
+  { path: '', pathMatch: 'full', redirectTo: '/dashboard' },
   {path: 'dashboard', component: DashboardComponent},
   {path: 'services', component: ServicesComponent},
   {path: 'appointments', component: AppointmentComponent},

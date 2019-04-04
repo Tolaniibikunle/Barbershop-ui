@@ -1,8 +1,40 @@
 @import "util/colors";
 
-main {
-  margin-top: 2%;
-  .slideshow-row {
-    margin-top: 3%;
+.layout-transparent .mdl-layout__header,
+.layout-transparent .mdl-layout__drawer-button, i {
+  color: black;
+}
+
+.mdl-layout .mdl-layout__drawer-button {
+  color: black;
+}
+
+.mdl-navigation__link {
+  color: black;
+}
+
+.mdl-layout__drawer div.mdl-layout__drawer-button i {
+  color: black !important;
+}
+
+.mdl-navigation__link:nth-child(even) {
+  &:hover {
+    color: $blue-text;
+  }
+}
+
+.mdl-navigation__link:nth-child(odd) {
+  &:hover {
+    color: $theme-red;
+  }
+}
+
+main.mdl-layout__content {
+  margin: 2%;
+}
+
+@media only screen and (min-width: 600px) {
+  .mdl-layout__drawer .mdl-layout-title {
+    display: none;
   }
 }

@@ -13,6 +13,7 @@ import { BlogComponent } from './components/screens/blog/blog.component';
 import { AboutUsComponent } from './components/screens/about-us/about-us.component';
 import { ContactUsComponent } from './components/screens/contact-us/contact-us.component';
 import { DashboardComponent } from './components/screens/dashboard/dashboard.component';
+import { MDL } from './util/MaterialDesignLiteUpgradeElement';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { DashboardComponent } from './components/screens/dashboard/dashboard.com
     BlogComponent,
     AboutUsComponent,
     ContactUsComponent,
-    DashboardComponent
+    DashboardComponent,
+    MDL
   ],
   imports: [
     BrowserModule,
