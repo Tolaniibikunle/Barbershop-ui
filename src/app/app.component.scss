@@ -33,6 +33,10 @@ main.mdl-layout__content {
   margin: 2%;
 }
 
+.is-small-screen main.mdl-layout__content{
+  margin: 15% 2% 2% 2%;
+}
+
 @media only screen and (min-width: 600px) {
   .mdl-layout__drawer .mdl-layout-title {
     display: none;

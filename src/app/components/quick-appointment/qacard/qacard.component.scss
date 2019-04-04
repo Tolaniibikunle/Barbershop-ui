@@ -1,0 +1,47 @@
+.mdl-card {
+    width: 100%;
+    min-height: 0px;
+    .time-banner {
+        position: absolute;
+        right: 0;
+        top: 0;
+        &.green {
+            color: #34a853;
+        }
+        &.warn {
+            color: #fbbc05;
+        }
+        &.danger {
+            color: #ea4335;
+        }
+        i {
+            font-size: 30px;
+        }
+    }
+    .mdl-card__supporting-text {
+        padding: 0px 16px 0px 16px;
+    }
+    .mdl-card__title-text {
+        i {
+            margin-right: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+td {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 700;
+}
+
+.person-icon {
+    color: #000000;
+}
+
+.money-icon {
+    color: #85bb65;
+}

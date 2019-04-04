@@ -14,6 +14,9 @@ import { AboutUsComponent } from './components/screens/about-us/about-us.compone
 import { ContactUsComponent } from './components/screens/contact-us/contact-us.component';
 import { DashboardComponent } from './components/screens/dashboard/dashboard.component';
 import { MDL } from './util/MaterialDesignLiteUpgradeElement';
+import { QuickAppointmentComponent } from './components/quick-appointment/quick-appointment.component';
+import { QACardComponent } from './components/quick-appointment/qacard/qacard.component';
+import { ContactUsCardComponent } from './components/contact-us-card/contact-us-card.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { MDL } from './util/MaterialDesignLiteUpgradeElement';
     AboutUsComponent,
     ContactUsComponent,
     DashboardComponent,
-    MDL
+    MDL,
+    QuickAppointmentComponent,
+    QACardComponent,
+    ContactUsCardComponent
   ],
   imports: [
     BrowserModule,
