@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { FormsModule } from '@angular/forms';
+import { TextMaskModule } from 'angular2-text-mask';
+
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -17,6 +20,7 @@ import { MDL } from './util/MaterialDesignLiteUpgradeElement';
 import { QuickAppointmentComponent } from './components/quick-appointment/quick-appointment.component';
 import { QACardComponent } from './components/quick-appointment/qacard/qacard.component';
 import { ContactUsCardComponent } from './components/contact-us-card/contact-us-card.component';
+import { AddressCardComponent } from './components/address-card/address-card.component';
 
 @NgModule({
   declarations: [
@@ -34,11 +38,14 @@ import { ContactUsCardComponent } from './components/contact-us-card/contact-us-
     MDL,
     QuickAppointmentComponent,
     QACardComponent,
-    ContactUsCardComponent
+    ContactUsCardComponent,
+    AddressCardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    TextMaskModule
   ],
   providers: [],
   bootstrap: [AppComponent]
