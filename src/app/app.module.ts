@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { FormsModule } from '@angular/forms';
 import { TextMaskModule } from 'angular2-text-mask';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -21,6 +24,12 @@ import { QuickAppointmentComponent } from './components/quick-appointment/quick-
 import { QACardComponent } from './components/quick-appointment/qacard/qacard.component';
 import { ContactUsCardComponent } from './components/contact-us-card/contact-us-card.component';
 import { AddressCardComponent } from './components/address-card/address-card.component';
+import { RegistrationConfirmationComponent } from './components/screens/registration-confirmation/registration-confirmation.component';
+import { LoginScreenComponent } from './components/screens/login-screen/login-screen.component';
+import { LoginCardComponent } from './components/screens/login-screen/components/login-card/login-card.component';
+import { ForgotPasswordCardComponent } from './components/screens/login-screen/components/forgot-password-card/forgot-password-card.component';
+import { SignUpCardComponent } from './components/screens/login-screen/components/sign-up-card/sign-up-card.component';
+import { AlertComponent } from './components/alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -39,13 +48,21 @@ import { AddressCardComponent } from './components/address-card/address-card.com
     QuickAppointmentComponent,
     QACardComponent,
     ContactUsCardComponent,
-    AddressCardComponent
+    AddressCardComponent,
+    RegistrationConfirmationComponent,
+    LoginScreenComponent,
+    LoginCardComponent,
+    ForgotPasswordCardComponent,
+    SignUpCardComponent,
+    AlertComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    TextMaskModule
+    ReactiveFormsModule,
+    TextMaskModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

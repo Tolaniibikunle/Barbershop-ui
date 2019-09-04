@@ -3,7 +3,19 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  mapsApiKey: "",
+  api: {
+    baseUrl: 'http://localhost:8080',
+    services: {
+      listAll: '/services/listAll'
+    },
+    auth: {
+      login: '/auth/login',
+      registrationConfirm: '/auth/registrationConfirm?token=${token}',
+      resendRegistrationToken: '/auth/resendRegistrationToken?token=${token}'
+    }
+  }
 };
 
 /*

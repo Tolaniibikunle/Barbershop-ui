@@ -27,9 +27,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/tomtomsdk/map.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/tomtomsdk/tomtom.min.js"
+            ]
           },
           "configurations": {
             "production": {

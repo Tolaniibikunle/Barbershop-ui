@@ -42,3 +42,21 @@ main.mdl-layout__content {
     display: none;
   }
 }
+
+.logout-btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #B00020;
+  color: #FFFFFF;
+}
+
+.login-btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: $medium-blue;
+  color: #FFFFFF;
+}

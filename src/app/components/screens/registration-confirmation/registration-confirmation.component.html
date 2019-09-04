@@ -1,0 +1,60 @@
+<div class="mdl-card mdl-shadow--2dp">
+  <div class="internal-container" *ngIf="registered">
+    <div class="mdl-card-title">
+      <h2 class="mdl-card__title-text">
+        Registration Confirmed!
+      </h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+      You can now signup for services!
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+      <button class="mdl-button mdl-button--colored mdl-js-button 
+        mdl-js-ripple-effect" (click)="returnToDashboard()">
+        Return to Dashboard
+      </button>
+    </div>
+  </div>
+  <div class="internal-container" *ngIf="error==='invalid'">
+    <div class="mdl-card-title">
+      <h2 class="mdl-card__title-text">
+        Registration Failed
+      </h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+      Your registration has failed because the token was invalid.
+      You can try to get a new token by clicking the button below.
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+      <button class="mdl-button mdl-button--colored mdl-js-button 
+            mdl-js-ripple-effect" (click)="requestNewToken()">
+        Request New Token
+      </button>
+      <button class="mdl-button mdl-button--colored mdl-js-button 
+            mdl-js-ripple-effect" (click)="requestHelp()">
+        Ask For Help
+      </button>
+    </div>
+  </div>
+  <div class="internal-container" *ngIf="error==='not-exist'">
+    <div class="mdl-card-title">
+      <h2 class="mdl-card__title-text">
+        Registration Failed
+      </h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+      Your registration has failed because you never signed up!
+      You can click below to sign up or browse.
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+      <button class="mdl-button mdl-button--colored mdl-js-button 
+              mdl-js-ripple-effect">
+        Sign Up
+      </button>
+      <button class="mdl-button mdl-button--colored mdl-js-button 
+              mdl-js-ripple-effect" (click)="returnToDashboard()">
+        Just Browse
+      </button>
+    </div>
+  </div>
+</div>

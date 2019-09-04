@@ -6,6 +6,9 @@
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation">
         <a *ngFor="let route of routes" class="mdl-navigation__link" [routerLink]="route.link">{{route.name}}</a>
+        <button id="user-menu" class="mdl-button mdl-js-button mdl-button--icon">
+          <i class="material-icons">account_circle</i>
+        </button>
       </nav>
     </div>
   </header>
@@ -13,6 +16,10 @@
     <span class="mdl-layout-title">Gentlemens Quarters</span>
     <nav class="mdl-navigation">
       <a *ngFor="let route of routes" class="mdl-navigation__link" [routerLink]="route.link">{{route.name}}</a>
+      <button *ngIf="user" class="mdl-button mdl-button--colored mdl-js-button 
+              mdl-js-ripple-effect logout-btn" (click)="logout()">Logout</button>
+      <button *ngIf="!user" class="mdl-button mdl-button--colored mdl-js-button 
+              mdl-js-ripple-effect login-btn" (click)="goToLogin()">Login</button>
     </nav>
   </div>
   <main class="mdl-layout__content">
@@ -21,7 +28,7 @@
   <footer class="mdl-mini-footer">
     <div class="mdl-mini-footer__left-section">
       <div class="mdl-logo">
-        More Information
+        Gentleman’s Quarter’s &copy; {{currentYear}}
       </div>
       <ul class="mdl-mini-footer__link-list">
         <li><a href="#">Help</a></li>
@@ -42,3 +49,12 @@
     </div>
   </footer>
 </div>
+
+<ul *ngIf="user" class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="user-menu">
+  <li class="mdl-menu__item">Profile</li>
+  <li class="mdl-menu__item">Appointment History</li>
+  <li class="mdl-menu__item" (click)="logout()">Logout</li>
+</ul>
+<ul *ngIf="!user" class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="user-menu">
+  <li class="mdl-menu__item" (click)="goToLogin()">Login</li>
+</ul>

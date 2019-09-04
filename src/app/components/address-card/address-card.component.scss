@@ -1,0 +1,17 @@
+.mdl-card {
+    width: 100%;
+    .mdl-card__supporting-text {
+        margin: 0 auto;
+        .google-maps-container {
+            width: 100%
+        }
+
+    }
+    .mdl-button {
+        width: 98%;
+    }
+}
+
+.map-container {
+    height: 300px;
+}

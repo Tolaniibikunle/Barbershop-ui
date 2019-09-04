@@ -6,34 +6,35 @@
     <form class="mdl-grid">
       <div mdl
         class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
-        <input class="mdl-textfield__input" type="text" id="firstName" [(ngModel)]="firstName">
+        <input class="mdl-textfield__input" type="text" id="firstName" [(ngModel)]="firstName" name="first">
         <label class="mdl-textfield__label" for="firstName">First Name</label>
       </div>
       <div mdl
         class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
-        <input class="mdl-textfield__input" type="text" id="lastName" [(ngModel)]="lastName">
+        <input class="mdl-textfield__input" type="text" id="lastName" [(ngModel)]="lastName" name="last">
         <label class="mdl-textfield__label" for="lastName">Last Name</label>
       </div>
       <div mdl
         class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
         <input class=" mdl-textfield__input" type="text" id="phoneNumber" type="tel" [(ngModel)]="phoneNumber"
-          [textMask]="{mask: masks.phoneNumber}">
+          [textMask]="{mask: masks.phoneNumber}" name="phone">
         <label class=" mdl-textfield__label" for="phoneNumber">Phone Number</label>
       </div>
       <div mdl
         class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--1-col-phone">
-        <input class="mdl-textfield__input" type="text" id="email" [(ngModel)]="email">
+        <input class="mdl-textfield__input" type="text" id="email" [(ngModel)]="email" name="email">
         <label class="mdl-textfield__label" for="email">Email</label>
       </div>
       <div mdl
         class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
-        <textarea class="mdl-textfield__input" type="text" rows="5" id="comments" [(ngModel)]="comments"></textarea>
+        <textarea class="mdl-textfield__input" type="text" rows="5" id="comments" [(ngModel)]="comments"
+          name="comments"></textarea>
         <label class="mdl-textfield__label" for="comments">Comments...</label>
       </div>
     </form>
   </div>
   <div class="mdl-card__actions">
-    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" (click)="save()">
       Submit
     </a>
   </div>
